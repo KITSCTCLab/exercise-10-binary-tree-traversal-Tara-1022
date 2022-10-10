@@ -38,15 +38,15 @@ def preorder(root) -> None:
     if root is None:
         return
     print(root.data, end = " ")
-    inorder(root.left_child)
-    inorder(root.right_child)
+    preorder(root.left_child)
+    preorder(root.right_child)
 
 
 def postorder(root) -> None:
     if root is None:
         return
-    inorder(root.left_child)
-    inorder(root.right_child)
+    postorder(root.left_child)
+    postorder(root.right_child)
     print(root.data, end = " ")
 
 
